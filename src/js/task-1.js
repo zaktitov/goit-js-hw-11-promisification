@@ -12,7 +12,7 @@ const delay = (ms) => {
       } else {
         reject(console.log("error"));
       }
-    }, 2000);
+    }, ms);
   });
 };
 const logger = (time) => console.log(`Resolved after ${time}ms`);

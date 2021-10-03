@@ -7,19 +7,17 @@ const users = [
 
 const toggleUserState = (allUsers, userName) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const isTrue = 1 > 0;
+    const isTrue = 1 > 0;
 
-      if (isTrue) {
-        resolve(
-          (allUsers.map((user) =>
-            user.name === userName ? { ...user, active: !user.active } : user
-          ))
-        );
-      } else {
-        reject(console.log(`u did a mistake in ur code`));
-      }
-    });
+    if (isTrue) {
+      resolve(
+        allUsers.map((user) =>
+          user.name === userName ? { ...user, active: !user.active } : user
+        )
+      );
+    } else {
+      reject(console.log(`u did a mistake in ur code`));
+    }
   });
 };
 
